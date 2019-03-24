@@ -4,7 +4,7 @@ title = "Alora Labs"
 
 googleAnalytics = "UA-126455348-1"
 enableRobotsTXT = true
-disableKinds = ["taxonomy", "section", "taxonomyTerm"]
+disableKinds = ["taxonomy", "taxonomyTerm"]
 enableGitInfo = true
 
 [params]
