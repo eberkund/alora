@@ -13,8 +13,9 @@
     </div>
 </footer>
 
-{{ $main := resources.Get "scripts/main.ts" }}
-<script src="{{ $main.RelPermalink }}" integrity="{{ $main.Data.Integrity }}"></script>
+{{ $scripts := resources.Get "scripts/main.ts" }}
+{{ $js := $scripts | js.Build }}
+<script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/instantclick/3.1.0/instantclick.min.js" data-no-instant></script>
 <script data-no-instant>InstantClick.init();</script>
